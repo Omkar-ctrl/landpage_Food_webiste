@@ -1,0 +1,640 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('path/to/Gilroy-Regular.woff2') format('woff2'), /* Regular font */
+         url('path/to/Gilroy-Bold.woff2') format('woff2'); /* Bold font */
+    /* Add more font weights if available */
+    /* You can include other font formats (like woff) and specify different font weights (e.g., bold, italic) if you have those variations */
+  }
+  
+  /* Now, apply the Gilroy font to an element or a class */
+  body {
+    font-family: 'Gilroy', sans-serif;
+  }
+  
+
+#main{
+    height: 100vh;
+    width: 100%;
+    background-color: #EEF8FF;
+}
+
+nav{
+    height: 10vh;
+    width: 100%;
+    display: flex ;
+}
+
+.left-nav,.right-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 25vw;
+    gap: 1.5vw;
+}
+
+
+
+.center-nav{
+    height: 100%;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+
+}
+
+.left-nav a{
+    text-decoration: none;
+    font-size: 3vw;
+    font-weight: 700;
+    color: orangered;
+}
+
+.center-nav a{
+    text-decoration: none;
+    color: rgb(58, 57, 57);
+    font-size: 1vw;
+    font-weight: 400;
+
+}
+
+
+.right-nav .search{
+    display: flex;
+    align-items: center;
+    height: 5vh;
+    padding: 0vh 1.5vw;
+    background-color: white;
+    width: 11vw;
+    border-radius: 0.5vw;
+    overflow: hidden;
+    gap: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+
+.search input{
+    padding: 0.7vh 0.1vw;
+    border: none;
+    font-size: 1vw;
+    outline: none;
+    background: none;
+}
+.search i{
+    font-size: 1vw;
+}
+
+
+.cart{
+    height: 5vh;
+    width: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orangered;
+    color: white;
+    font-size: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 0.5vw;
+    
+}
+
+.main-content{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.main-content .left{
+    padding:7vh 7vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content .left h1{
+    font-size: 5vw;
+    font-weight: 600;
+    opacity: 90%;
+    /* background-image: url("https://i.pinimg.com/564x/e3/59/9e/e3599e5b87fda3ca4277a541b44a6c7b.jpg");
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; */
+
+}
+
+
+
+.main-content .left h2{
+    font-size: 5vw;
+    font-weight: 350;
+    opacity: 80%;
+
+}
+
+.main-content .left p{
+    font-size: 1.5vw;
+    line-height: 3.5vh;
+    font-weight: 100;
+    opacity: 60%;
+    padding: 2vh 0vw;
+    color: #000;
+}
+
+
+.left .left-side .search-left{
+    display: flex;
+    align-items: center;
+    height: 6vh;
+    padding: 0vh 1vw;
+    background-color: white;
+    width: 30vw;
+    border-radius: 0.5vw;
+    margin-top: 3vh;
+    overflow: hidden;
+    gap: 0.5vw;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+
+
+
+.search-left input{
+    padding: 1vh 0.4vw;
+    border: none;
+    font-size: 1.2vw;
+    outline: none;
+    background: none;
+}
+
+.search-left i{
+    font-size: 1vw;
+    color: orangered;
+}
+
+
+
+
+.left-side button{
+    padding: 2vh 4vw;
+    font-size: 1vw;
+    margin-top: 3vh;
+    background-color: orangered;
+    color: white;
+    border: none;
+    font-weight: 500;
+    outline: none;
+    display: flex;
+    align-items: center;
+    border-radius: 0.3vw;
+}
+
+
+
+.right{
+    height: 100%;
+    width: 45%;
+    position: relative;
+    display: flex;
+    margin-right: 4vw;
+    align-items:center;
+    justify-content: center;
+}
+.right>#background{
+    height: 80vh;
+    width: 40vw;
+}
+
+#all-plate{
+    height: 60vh;
+    width: 30vw;
+    position: absolute;
+    animation: circle 25s infinite linear;
+}
+
+#plate3{
+    position: absolute;
+    top: -20%;
+    /* height: 45vh;
+    width: 25vw; */
+    left: 40%;
+    animation: circle 15s infinite linear;
+    transition: all ease 0.5s;
+
+
+}
+
+#plate1{
+    position: absolute;
+    top: 0%;
+    left: -30%;
+    animation: circle 15s infinite linear;
+    transition: all ease 0.5s;
+}
+
+
+#plate2{
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    animation: circle 15s infinite linear;
+    transition: all ease 0.5s;
+
+    /* height: 55vh;
+    width: 30vw; */
+}
+
+
+#plate1:hover{
+    scale: 1.3;
+
+}
+#plate2:hover{
+    scale: 1.3;
+
+}
+#plate3:hover{
+    scale: 1.3;
+}
+
+
+
+
+@keyframes circle{
+    0%{
+        rotate: 0deg;
+    }
+
+    100%{
+        rotate: 360deg;
+    }
+}
+
+
+#glass{
+    height: 20vh;
+    width: 20vw;
+    background-color: orange;
+    position: absolute;
+    left: -25%;
+    top: 60%;
+    background: rgba( 74, 74, 74, 0.25 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+
+
+}
+
+#glass>.sub-content{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.5vh 0.5vw;
+    gap: 1vw;
+}
+
+#glass h4{
+    font-size: 1vw;
+    font-weight: 600;
+
+}
+
+#glass p{
+    font-size: 1vw;
+    padding: 1vh 2vw;
+    opacity: 80%;
+    margin-top: 1vh;
+
+}
+#glass img{
+    height: 8vh;
+    width: 4.5vw;
+    padding: 0.3vh 0.1vw;
+}
+
+
+#glass>.rating{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: 3.5vh;
+    width: 3.9vw;
+    padding: 0.6vh 1vw;
+    margin: 0vh 1.7vw;
+    position: absolute;
+    gap: 0.4vw;
+    top: 30%;
+    left: 20%;
+    background: rgba(255, 255, 255, 0.793);
+
+}
+
+.rating i{
+  
+    font-size: 1vw;
+    color: rgb(206, 206, 5);
+}
+#glass>#button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+}
+
+
+
+
+
+
+
+
+@media(max-width:500px){
+
+
+    #main{
+        height: 100vh;
+        width: 100%;
+        background-color: white;
+        /* background-color: #EEF8FF; */
+    }
+
+    nav{
+        height: 6vh;
+        margin-top: 2vh;
+        padding: 2vh 1vw;
+        width: 100%;
+        display: flex ;
+    }
+
+
+.left-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 40vw;
+    gap: 1.5vw;
+}
+    .left-nav a{
+        text-decoration: none;
+        font-size: 9vw;
+        font-weight: 700;
+        padding: 2vh 10vw;
+        color: orangered;
+    }
+
+    .center-nav{
+        display: none;
+    }
+
+    .main-content{
+        flex-direction: column;
+    }
+
+    .right-nav{
+        display: none;
+    }
+
+    .main-content .left{
+        padding:5vh 7vw;
+        width: 100%;
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+    .main-content .left h1{
+        font-size: 10vw;
+        font-weight: 600;
+        opacity: 90%;
+        /* background-image: url("https://i.pinimg.com/564x/e3/59/9e/e3599e5b87fda3ca4277a541b44a6c7b.jpg");
+        background-size: cover;
+        background-position: center;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent; */
+    
+    }
+
+
+    .main-content .left h2{
+        font-size: 9vw;
+        font-weight: 350;
+        opacity: 80%;
+    
+    }
+    
+    .main-content .left p{
+        font-size: 4.5vw;
+        line-height: 3.5vh;
+        font-weight: 100;
+        opacity: 60%;
+        padding: 2vh 0vw;
+        color: #000;
+    }
+
+    .left .left-side .search-left{
+        display: flex;
+        align-items: center;
+        height: 4vh;
+        padding: 0vh 1vw;
+        background-color: white;
+        width: 60vw;
+        border-radius: 1.5vw;
+        margin-top: 0.5vh;
+        overflow: hidden;
+        gap: 0.5vw;
+        justify-content: space-between;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+    
+    
+    
+    .search-left input{
+        padding: 1vh 0.4vw;
+        border: none;
+        font-size: 3.2vw;
+        outline: none;
+        background: none;
+    }
+    
+    .search-left i{
+        font-size: 5vw;
+        color: orangered;
+    }
+    
+    .left-side button{
+        padding: 1vh 5vw;
+        font-size: 3vw;
+        margin-top: 2vh;
+        background-color: orangered;
+        color: white;
+        border: none;
+        font-weight: 500;
+        outline: none;
+        display: flex;
+        align-items: center;
+        border-radius: 1.3vw;
+    }
+    
+    .right{
+        height: 100%;
+        width: 50%;
+        position: relative;
+        display: flex;
+
+        align-items:center;
+        justify-content: center;
+        
+    }
+    .right>#background{
+        height: 30vh;
+        width: 60vw;
+    }
+    
+    #all-plate{
+        height: 30vh;
+        width: 40vw;
+       
+        position: absolute;
+        animation: circle 25s infinite linear;
+    }
+    
+    #plate3{
+        position: absolute;
+        top: -5%;
+        height: 140px;
+        width: 140px;
+        left: 50%;
+        animation: circle 15s infinite linear;
+        transition: all ease 0.5s;
+    
+    
+    }
+    
+    #plate1{
+        position: absolute;
+        left: -60%;
+        top: 30%;
+        height: 140px;
+        width: 140px;
+        animation: circle 15s infinite linear;
+        transition: all ease 0.5s;
+    }
+    
+    
+    #plate2{
+        position: absolute;
+        top: 57%;
+        left: 40%;
+        animation: circle 15s infinite linear;
+        transition: all ease 0.5s;
+        height: 180px;
+        width: 180px;
+
+    }
+    
+
+    
+    #glass{
+        height: 15vh;
+        width: 55vw;
+        background-color: orange;
+        position: absolute;
+        
+        left: -25%;
+        top: 70%;
+        background: rgba( 74, 74, 74, 0.25 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+    
+    
+    }
+    
+    #glass>.sub-content{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0vh 1.5vw;
+        gap: 1vw;
+    }
+    
+    #glass h4{
+        font-size: 4vw;
+        position: absolute;
+        top: 15%;
+        left: 40%;
+        font-weight: 600;
+    
+    }
+    
+    #glass p{
+        font-size: 3vw;
+        padding: 0dvh 2vw;
+        opacity: 80%;
+        position: absolute;
+        top: 55%;
+        left: 0%;
+        
+    
+    }
+    #glass img{
+        height:  10vh;
+        width: 20vw;
+        padding: 0.3vh 0.1vw;
+    }
+    
+    
+    #glass>.rating{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        height: 3.2vh;
+        width: 13.9vw;
+        padding: 0.6vh 2.5vw;
+        margin: 0vh 1.7vw;
+        position: absolute;
+        gap:7.4vw;
+        top: 30%;
+        left: 40%;
+        background: rgba(255, 255, 255, 0.793);
+    
+    }
+    
+    .rating i{
+      
+        font-size: 4vw;
+        color: rgb(206, 206, 5);
+    }
+    #glass>#button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1vw;
+    }
+    
+
+
+
+
+
+}
